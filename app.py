@@ -25,5 +25,9 @@ def predict_single(img_file):
 def predict():
     return jsonify(predict_single(request.files['image']))
 
+@app.route("/")
+def hello_world():
+    return "Hello, World!"
+
 if __name__ == '__main__':
     app.run()
